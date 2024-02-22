@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <footer className="container py-8 flex items-center justify-between gap-4">
+    <footer className="container py-8 flex flex-col-reverse md:flex-row items-center justify-between gap-4">
       <h4>Naianderson Bruno</h4>
 
       <div className="flex items-center gap-6 text-stone-500 font-overpassMono">

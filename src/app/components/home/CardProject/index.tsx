@@ -1,4 +1,5 @@
 import { Project } from '@/interfaces/home'
+import { ArrowUpRight } from '@phosphor-icons/react'
 import Image from 'next/image'
 
 interface CardProjectProps {
@@ -25,13 +26,18 @@ export function CardProject({ project }: CardProjectProps) {
           </p>
         )}
 
-        <div className="font-overpassMono flex items-center gap-6">
+        <div className="font-overpassMono flex items-center gap-6 mt-4">
           <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
             Repositório
           </a>
 
-          <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
-            Demo
+          <a
+            className="flex items-center gap-3"
+            href={project.demoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Demo <ArrowUpRight size={16} />
           </a>
         </div>
       </div>
