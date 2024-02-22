@@ -22,7 +22,7 @@ export function Header() {
       <div className="container py-4 flex items-center justify-between">
         <Link href="/">
           <h1 className="text-3xl">
-            NB <span className="text-purple-500">_</span>{' '}
+            NB <span className="dark:text-orange-300 text-orange-400">_</span>{' '}
           </h1>
         </Link>
 

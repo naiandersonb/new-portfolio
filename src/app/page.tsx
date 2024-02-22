@@ -1,9 +1,15 @@
 'use client'
 
 import { projects } from '@/data'
+import { getPreferSchemeColor } from '@/utils'
+import { useEffect } from 'react'
 import { CardProject, Hero } from './components/home'
 
 export default function Home() {
+  useEffect(() => {
+    getPreferSchemeColor()
+  }, [])
+
   return (
     <main className="container">
       <Hero />

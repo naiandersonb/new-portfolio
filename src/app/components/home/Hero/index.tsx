@@ -17,14 +17,17 @@ export function Hero() {
 
       <h1 className="text-[2rem]">
         Olá, eu me chamo Naianderson Bruno, <br />
-        sou <span className="text-[#8A86DA]">desenvolvedor front-end.</span>
+        sou{' '}
+        <span className="dark:text-orange-300 text-orange-400">
+          desenvolvedor front-end.
+        </span>
       </h1>
 
       <p className="mt-2 md:text-base text-sm text-stone-500 flex items-center gap-2">
         Front-end na{' '}
         <a
           className="dark:text-stone-200 text-stone-950 font-bold flex items-center gap-3"
-          href="#"
+          href="https://themembersbrasil.com/"
           target="_blank"
           rel="noopener noreferrer"
         >

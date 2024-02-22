@@ -7,8 +7,8 @@ interface CardProjectProps {
 }
 export function CardProject({ project }: CardProjectProps) {
   return (
-    <article className="pt-7 md:py-0">
-      <div className="max-h-[313px] overflow-hidden rounded-md">
+    <article className="cursor-pointer pt-7 md:py-0">
+      <div className="max-h-[313px] grayscale hover:grayscale-0 transition-all overflow-hidden rounded-md">
         <Image
           unoptimized
           width={558}
