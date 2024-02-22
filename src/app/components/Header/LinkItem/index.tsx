@@ -14,7 +14,7 @@ export function LinkItem({
 }: LinkItemProps) {
   return (
     <div
-      className={`font-overpassMono px-4 ${isSelected ? 'dark:text-stone-100 text-stone-950' : 'text-stone-500'}`}
+      className={`${isSelected ? 'dark:text-stone-100 text-stone-950' : 'text-stone-500'}`}
     >
       <Link href={href}>{children}</Link>
     </div>
