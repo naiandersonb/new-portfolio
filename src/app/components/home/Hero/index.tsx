@@ -8,7 +8,7 @@ export function Hero() {
       <div className="aspect-square md:w-12 md:h-12 h-10 w-10 rounded-full overflow-hidden">
         <Image
           unoptimized
-          src="https://i.pinimg.com/564x/d7/aa/e7/d7aae7fed0ebc45b4e1c4d1cca059ba6.jpg"
+          src="https://i.pinimg.com/736x/44/e3/c5/44e3c52f1efe7432dc71bad6e0a2f96c.jpg"
           width={64}
           height={64}
           alt=""
@@ -23,8 +23,8 @@ export function Hero() {
         </span>
       </h1>
 
-      <p className="mt-2 md:text-base text-sm text-stone-500 flex items-center gap-2">
-        Front-end na{' '}
+      <p className="md:text-base text-sm text-stone-500 flex items-center gap-2">
+        Atualmente front-end na{' '}
         <a
           className="dark:text-stone-200 text-stone-950 font-bold flex items-center gap-3"
           href="https://themembersbrasil.com/"
@@ -35,7 +35,7 @@ export function Hero() {
         </a>
       </p>
 
-      <div className="flex items-center gap-4 mt-2">
+      <div className="flex items-center gap-4">
         {skills.map((skill) => (
           <a
             key={skill.name}

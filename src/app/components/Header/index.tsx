@@ -1,7 +1,7 @@
 'use client'
 
 import { changeAppTheme } from '@/utils'
-import { List, Moon } from '@phosphor-icons/react'
+import { Lightning, List } from '@phosphor-icons/react'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { LinkItem } from './LinkItem'
@@ -35,9 +35,9 @@ export function Header() {
 
           <button
             onClick={changeAppTheme}
-            className="p-2 rounded-full text-stone-200 dark:text-stone-950 bg-stone-950 dark:bg-stone-200"
+            className="p-2 rounded-full text-stone-950 dark:text-stone-200 bg-stone-50 dark:bg-stone-900"
           >
-            <Moon size={18} />
+            <Lightning size={18} weight="fill" />
           </button>
         </nav>
 
