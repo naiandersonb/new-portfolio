@@ -9,7 +9,6 @@ const config: Config = {
   theme: {
     fontFamily: {
       inter: 'var(--inter)',
-      overpassMono: 'var(--overpass-mono)',
     },
   },
   plugins: [],

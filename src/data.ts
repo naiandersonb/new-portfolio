@@ -30,15 +30,23 @@ export const projects = [
 
 export const skills = [
   {
+    name: 'Javascript',
+    link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+    image: 'javascript.svg',
+  },
+  {
     name: 'Typescript',
     link: 'https://www.typescriptlang.org',
     image: 'typescript.svg',
   },
   {
-    name: 'Javascript',
-    link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
-    image: 'javascript.svg',
+    name: 'React Js',
+    link: 'https://react.dev',
+    image: 'react.svg',
   },
-  { name: 'React Js', link: 'https://react.dev', image: 'react.svg' },
-  { name: 'Next.js', link: 'https://nextjs.org/', image: 'nextjs.svg' },
+  {
+    name: 'Next.js',
+    link: 'https://nextjs.org/',
+    image: 'nextjs.svg',
+  },
 ]

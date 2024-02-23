@@ -7,8 +7,8 @@ interface CardProjectProps {
 }
 export function CardProject({ project }: CardProjectProps) {
   return (
-    <article className="pt-7 md:py-0">
-      <div className="max-h-[313px] overflow-hidden rounded-md">
+    <article className="cursor-pointer pt-7 md:py-0">
+      <div className="max-h-[313px] grayscale hover:grayscale-0 transition-all overflow-hidden rounded-md">
         <Image
           unoptimized
           width={558}
@@ -21,18 +21,23 @@ export function CardProject({ project }: CardProjectProps) {
       <div className="mt-4 flex flex-col gap-3">
         <h2 className="font-bold">{project.title}</h2>
         {!!project?.description && (
-          <p className="font-overpassMono text-stone-500 md:text-base text-sm">
+          <p className="text-stone-500 md:text-base text-sm">
             {project.description}
           </p>
         )}
 
-        <div className="font-overpassMono flex items-center gap-6 mt-4">
-          <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
+        <div className="flex items-center gap-6 mt-4 ">
+          <a
+            className="dark:hover:text-orange-300 hover:text-orange-400"
+            href={project.repoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Repositório
           </a>
 
           <a
-            className="flex items-center gap-3"
+            className="flex items-center gap-3 dark:hover:text-orange-300 hover:text-orange-400"
             href={project.demoUrl}
             target="_blank"
             rel="noopener noreferrer"
