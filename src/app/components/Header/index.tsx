@@ -18,7 +18,7 @@ export function Header() {
   }, [])
 
   return (
-    <header className="fixed left-0 right-0 top-0 backdrop-blur-md dark:bg-stone-950/90 bg-stone-200/90">
+    <header className="fixed z-10 left-0 right-0 top-0 backdrop-blur-md dark:bg-stone-950/90 bg-stone-200/90">
       <div className="container py-4 flex items-center justify-between">
         <Link href="/">
           <h1 className="text-3xl">

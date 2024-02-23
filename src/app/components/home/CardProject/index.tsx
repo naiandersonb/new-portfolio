@@ -26,13 +26,18 @@ export function CardProject({ project }: CardProjectProps) {
           </p>
         )}
 
-        <div className="flex items-center gap-6 mt-4">
-          <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
+        <div className="flex items-center gap-6 mt-4 ">
+          <a
+            className="dark:hover:text-orange-300 hover:text-orange-400"
+            href={project.repoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Repositório
           </a>
 
           <a
-            className="flex items-center gap-3"
+            className="flex items-center gap-3 dark:hover:text-orange-300 hover:text-orange-400"
             href={project.demoUrl}
             target="_blank"
             rel="noopener noreferrer"
