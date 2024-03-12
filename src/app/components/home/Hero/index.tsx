@@ -17,7 +17,6 @@ export function Hero() {
 
       <h1 className="text-[2rem]">
         Olá, eu me chamo Naianderson Bruno, <br />
-        sou{' '}
         <span className="dark:text-orange-300 text-orange-400">
           desenvolvedor front-end.
         </span>
