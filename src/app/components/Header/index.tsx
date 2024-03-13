@@ -2,11 +2,15 @@
 
 import { changeAppTheme, getPreferSchemeColor } from '@/utils'
 import { Lightning, List } from '@phosphor-icons/react'
+import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { useEffect } from 'react'
+import { LocaleSwitcher } from '../LocaleSwitcher'
 import { LinkItem } from './LinkItem'
 
 export function Header() {
+  const t = useTranslations('Header')
+
   useEffect(() => {
     const appTheme = localStorage.getItem('@nb:app-theme')
     if (!appTheme) getPreferSchemeColor()
@@ -27,10 +31,12 @@ export function Header() {
 
         <nav className="md:flex items-center gap-8 hidden">
           <LinkItem href="/" isSelected>
-            Home
+            {t('navigation.home')}
           </LinkItem>
-          <LinkItem href="/about">About me</LinkItem>
-          <LinkItem href="/contact">Contact</LinkItem>
+          <LinkItem href="about">{t('navigation.about')}</LinkItem>
+          <LinkItem href="contact">{t('navigation.contact')}</LinkItem>
+
+          <LocaleSwitcher />
 
           <button
             onClick={changeAppTheme}

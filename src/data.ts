@@ -74,28 +74,26 @@ export const skills = [
 
 export const career = [
   {
-    id: new Date().getTime().toString(),
+    id: '1',
     type: 'course',
     period: 'Ago 2020 - Set 2021',
-    office:
-      'Curso técnico em Desenvolvimento de Sistemas, SENAI - Serviço Nacional de Aprendizagem Industrial',
+    office: 'journey.career.technicalGraduation',
   },
   {
-    id: new Date().getTime().toString(),
+    id: '2',
     type: 'freelancer',
     period: 'Jan 2020 - jun 2020',
-    office:
-      'Desenvolvedor front-end e UI Design em Transfer: Viagens & Turismo',
+    office: 'journey.career.transfer',
   },
   {
-    id: new Date().getTime().toString(),
+    id: '3',
     type: 'work',
     period: 'Jun 2020 - present',
-    office: 'Desenvolvedor front-end em TheMembers',
+    office: 'journey.career.theMembers.title',
     assignments: [
-      'Desenvolvimento e manutenção de uma plataforma de ensino white label altamente interativa e personalizável.',
-      'Desenvolvimento de uma dashboard, permitindo aos clientes uma gestão eficiente de seus conteúdos e dados.',
-      'Desenvolvimento de uma comunidade que promove a interação entre usuários, proporcionando um ambiente colaborativo e engajador',
+      'journey.career.theMembers.assignments.one',
+      'journey.career.theMembers.assignments.two',
+      'journey.career.theMembers.assignments.three',
     ],
   },
 ]
