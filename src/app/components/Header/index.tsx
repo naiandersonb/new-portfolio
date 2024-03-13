@@ -1,19 +1,18 @@
 'use client'
 
-import { changeAppTheme } from '@/utils'
+import { changeAppTheme, getPreferSchemeColor } from '@/utils'
 import { Lightning, List } from '@phosphor-icons/react'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { LinkItem } from './LinkItem'
 
 export function Header() {
-  const [currentTheme, setCurrentTheme] = useState('dark')
-
   useEffect(() => {
-    const documentEl = document.getElementsByTagName('html')[0]
-    const hasDarkClass = documentEl.classList.contains('dark')
-    if (!hasDarkClass) {
-      setCurrentTheme('light')
+    const appTheme = localStorage.getItem('@nb:app-theme')
+    if (!appTheme) getPreferSchemeColor()
+    if (appTheme === 'dark') {
+      const htmlElement = document.documentElement
+      htmlElement.classList.add('dark')
     }
   }, [])
 

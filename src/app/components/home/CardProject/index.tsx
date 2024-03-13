@@ -1,14 +1,15 @@
 import { Project } from '@/interfaces/home'
 import { ArrowUpRight } from '@phosphor-icons/react'
 import Image from 'next/image'
+import { Stack } from '../Stack'
 
 interface CardProjectProps {
   project: Project
 }
 export function CardProject({ project }: CardProjectProps) {
   return (
-    <article className="cursor-pointer pt-7 md:py-0">
-      <div className="max-h-[313px] grayscale hover:grayscale-0 transition-all overflow-hidden rounded-md">
+    <article className="cursor-pointer md:pb-6 md:grayscale md:hover:grayscale-0 transition">
+      <div className="max-h-[313px] transition-all overflow-hidden rounded-md">
         <Image
           unoptimized
           width={558}
@@ -24,6 +25,17 @@ export function CardProject({ project }: CardProjectProps) {
           <p className="text-stone-500 md:text-base text-sm">
             {project.description}
           </p>
+        )}
+
+        {project.stacks && (
+          <div
+            data-id="stacks"
+            className="flex mt-3 flex-wrap items-center gap-2"
+          >
+            {project.stacks.map((stack) => (
+              <Stack stack={stack} key={stack} />
+            ))}
+          </div>
         )}
 
         <div className="flex items-center gap-6 mt-4 ">
