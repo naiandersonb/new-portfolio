@@ -3,7 +3,8 @@
 import { projects } from '@/data'
 import { getPreferSchemeColor } from '@/utils'
 import { useEffect } from 'react'
-import { CardProject, Hero } from './components/home'
+import { Hero } from './components/home'
+import { NewCardProject } from './components/home/NewCardProject'
 
 export default function Home() {
   useEffect(() => {
@@ -19,7 +20,7 @@ export default function Home() {
 
         <section className="grid gap-5 md:grid-cols-2 grid-cols-1 pb-4 md:divide-y-0 divide-y dark:divide-stone-800 divide-stone-300">
           {projects.map((project) => (
-            <CardProject project={project} key={project.title} />
+            <NewCardProject project={project} key={project.title} />
           ))}
         </section>
       </div>

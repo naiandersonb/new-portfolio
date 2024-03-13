@@ -19,13 +19,13 @@ export default function AboutMe() {
           />
         </div>
 
-        <h2 className="max-w-[55%] text-center text-stone-500 text-xl">
+        <h2 className="md:max-w-[55%] text-center text-stone-500 text-xl">
           Olá, me chamo Naianderson Bruno, atualmente moro em Caxias, MA. Sou
           desenvolvedor front-end a mais de 2 anos.
         </h2>
       </div>
 
-      <div className="my-20 max-w-[70%] mx-auto ">
+      <div className="my-20 md:max-w-[70%] mx-auto ">
         <h3 className="font-bold text-xl">Minha jornada</h3>
 
         <div className="mt-6 flex flex-col gap-6 ">

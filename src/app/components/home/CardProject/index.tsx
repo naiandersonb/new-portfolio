@@ -8,7 +8,7 @@ interface CardProjectProps {
 }
 export function CardProject({ project }: CardProjectProps) {
   return (
-    <article className="cursor-pointer pt-7 md:py-0">
+    <article className="cursor-pointer md:pb-6 md:grayscale md:hover:grayscale-0 transition">
       <div className="max-h-[313px] transition-all overflow-hidden rounded-md">
         <Image
           unoptimized
@@ -30,7 +30,7 @@ export function CardProject({ project }: CardProjectProps) {
         {project.stacks && (
           <div
             data-id="stacks"
-            className="flex mt-3 flex-wrap items-center gap-4"
+            className="flex mt-3 flex-wrap items-center gap-2"
           >
             {project.stacks.map((stack) => (
               <Stack stack={stack} key={stack} />

@@ -85,7 +85,7 @@ export const career = [
     type: 'freelancer',
     period: 'Jan 2020 - jun 2020',
     office:
-      'Desenvolvedor front-end e UI Design em Transfer: Viagens & Turismo</br>',
+      'Desenvolvedor front-end e UI Design em Transfer: Viagens & Turismo',
   },
   {
     id: new Date().getTime().toString(),
