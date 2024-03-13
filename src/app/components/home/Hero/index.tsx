@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export function Hero() {
   return (
-    <div className="min-h-[70vh] flex flex-col justify-center gap-4">
+    <div className="flex flex-col justify-center gap-4 h-full">
       <div className="aspect-square md:w-12 md:h-12 h-10 w-10 rounded-full overflow-hidden">
         <Image
           unoptimized
@@ -15,10 +15,11 @@ export function Hero() {
         />
       </div>
 
-      <h1 className="text-[2rem]">
-        Olá, eu me chamo Naianderson Bruno, <br />
-        <span className="dark:text-orange-300 text-orange-400">
-          desenvolvedor front-end.
+      <h1 className="md:text-[2rem] text-[1.5rem]">
+        Naianderson Bruno, <br />
+        <span className="dark:text-neutral-700 text-neutral-400">
+          {/* &lt;desenvolvedor front-end./&gt; */}
+          Desenvolvedor front-end
         </span>
       </h1>
 
