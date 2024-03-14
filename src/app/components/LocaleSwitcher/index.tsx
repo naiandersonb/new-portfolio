@@ -18,7 +18,7 @@ export function LocaleSwitcher() {
     <div className="group relative flex flex-col items-end">
       <button
         onClick={toggleIsOpen}
-        className="capitalize flex items-center gap-2 text-xs p-2 rounded-full overflow-hidden dark:bg-stone-900 bg-stone-100"
+        className="capitalize flex items-center gap-2 text-xs py-2 px-4 rounded-full overflow-hidden dark:bg-stone-900 bg-stone-100"
       >
         <Image src={flag} width={20} height={20} alt="" />
         {localeLabel}

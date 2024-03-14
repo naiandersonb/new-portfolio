@@ -24,8 +24,8 @@ export function Header() {
     <header className="fixed z-10 left-0 right-0 top-0 backdrop-blur-md dark:bg-stone-950/90 bg-stone-200/90">
       <div className="container py-4 flex items-center justify-between">
         <Link href="/">
-          <h1 className="text-3xl">
-            NB <span className="dark:text-orange-300 text-orange-400">_</span>{' '}
+          <h1 className="text-2xl font-extrabold italic dark:bg-stone-100 bg-stone-950  dark:text-stone-950 text-stone-100 p-2">
+            NB
           </h1>
         </Link>
 
