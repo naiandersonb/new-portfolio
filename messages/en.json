@@ -6,6 +6,10 @@
             "currentJob": "Currently front-end at"
         }
     },
+    "LocaleSwitcher": {
+      "english": "English",
+      "portuguese": "Portuguese"
+    },
     "About": {
       "heading": "Hello, my name is Naianderson Bruno, currently living in Caxias, MA. I've been a front-end developer for over 2 years.",
       "journey": {

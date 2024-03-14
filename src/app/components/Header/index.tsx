@@ -36,14 +36,16 @@ export function Header() {
           <LinkItem href="about">{t('navigation.about')}</LinkItem>
           <LinkItem href="contact">{t('navigation.contact')}</LinkItem>
 
-          <LocaleSwitcher />
+          <div className="flex items-center gap-2">
+            <LocaleSwitcher />
 
-          <button
-            onClick={changeAppTheme}
-            className="p-2 rounded-full text-stone-950 dark:text-stone-200 bg-stone-50 dark:bg-stone-900"
-          >
-            <Lightning size={18} weight="fill" />
-          </button>
+            <button
+              onClick={changeAppTheme}
+              className="p-2 rounded-full text-stone-950 dark:text-stone-200 bg-stone-50 dark:bg-stone-900"
+            >
+              <Lightning size={18} weight="fill" />
+            </button>
+          </div>
         </nav>
 
         <button className="text-zinc-950 dark:text-zinc-50 block  md:hidden">
