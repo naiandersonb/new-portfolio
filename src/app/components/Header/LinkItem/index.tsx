@@ -1,3 +1,6 @@
+'use client'
+
+import { useLocale } from 'next-intl'
 import Link from 'next/link'
 import { ReactNode } from 'react'
 
@@ -12,11 +15,13 @@ export function LinkItem({
   href,
   isSelected = false,
 }: LinkItemProps) {
+  const locale = useLocale()
+
   return (
     <div
       className={`${isSelected ? 'dark:text-stone-100 text-stone-950' : 'text-stone-500'}`}
     >
-      <Link href={href}>{children}</Link>
+      <Link href={`/${locale}/${href}`}>{children}</Link>
     </div>
   )
 }

@@ -1,8 +1,11 @@
 import { career } from '@/data'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
-import { CareerCard } from '../components/about/CareerCard'
+import { CareerCard } from '../../components/about/CareerCard'
 
-export default function AboutMe() {
+export default function About() {
+  const t = useTranslations('About')
+
   return (
     <div className="container min-h-[90vh] mt-[15vh]">
       <div
@@ -20,13 +23,12 @@ export default function AboutMe() {
         </div>
 
         <h2 className="md:max-w-[55%] text-center text-stone-500 text-xl">
-          Olá, me chamo Naianderson Bruno, atualmente moro em Caxias, MA. Sou
-          desenvolvedor front-end a mais de 2 anos.
+          {t('heading')}
         </h2>
       </div>
 
       <div className="my-20 md:max-w-[70%] mx-auto ">
-        <h3 className="font-bold text-xl">Minha jornada</h3>
+        <h3 className="font-bold text-xl">{t('journey.title')}</h3>
 
         <div className="mt-6 flex flex-col gap-6 ">
           {career.map((careerItem) => (
