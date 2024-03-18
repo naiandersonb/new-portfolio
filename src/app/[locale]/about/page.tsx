@@ -27,7 +27,7 @@ export default function About() {
         </h2>
       </div>
 
-      <div className="my-20 md:max-w-[70%] mx-auto ">
+      <div className="my-20 mx-auto">
         <h3 className="font-bold text-xl">{t('journey.title')}</h3>
 
         <div className="mt-6 flex flex-col gap-6 ">
