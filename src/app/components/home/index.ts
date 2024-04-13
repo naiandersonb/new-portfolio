@@ -1,3 +1,2 @@
-export * from './CardProject'
-export * from './Hero'
+export * from './CardProject';
 

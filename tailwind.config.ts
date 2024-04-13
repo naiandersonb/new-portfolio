@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     fontFamily: {
       inter: 'var(--inter)',
+      openSans: 'var(--open-sans)',
     },
   },
   plugins: [],
