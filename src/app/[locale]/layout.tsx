@@ -35,7 +35,7 @@ export default function LocaleLayout({
   const messages = useMessages()
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className="scroll-smooth">
       <body className={`${inter.variable} ${openSans.variable}`}>
         <NextIntlClientProvider messages={messages} locale={locale}>
           {children}

@@ -3,7 +3,8 @@
     "Home": {
         "hero": {
             "role": "Desenvolvedor front-end",
-            "currentJob": "Atualmente front-end na"
+            "currently": "Atualmente",
+            "currentJob": "Front-end na"
         }
     },
     "LocaleSwitcher": {
