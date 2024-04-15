@@ -1,13 +1,11 @@
 'use client'
 
 import { Footer } from '../components/Footer'
-import { Header } from '../components/Header'
 import { Hero } from '../components/Hero'
 
 export default function Home() {
   return (
-    <main className="min-h-full md:p-8 p-4 font-openSans  max-w-[1200px] w-full mx-auto">
-      <Header />
+    <>
       <Hero />
 
       <div id="projects">
@@ -36,6 +34,6 @@ export default function Home() {
         </div>
       </div>
       <Footer />
-    </main>
+    </>
   )
 }

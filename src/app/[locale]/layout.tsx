@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { NextIntlClientProvider, useMessages } from 'next-intl'
 import { Inter, Open_Sans } from 'next/font/google'
+import { Header } from '../components/Header'
 
 const locales = ['en', 'de']
 
@@ -38,7 +39,10 @@ export default function LocaleLayout({
     <html lang={locale} className="scroll-smooth">
       <body className={`${inter.variable} ${openSans.variable}`}>
         <NextIntlClientProvider messages={messages} locale={locale}>
-          {children}
+          <Header />
+          <main className="min-h-full mt-[80px] md:p-8 p-4 font-openSans max-w-[1200px] w-full mx-auto">
+            {children}
+          </main>
         </NextIntlClientProvider>
       </body>
     </html>
