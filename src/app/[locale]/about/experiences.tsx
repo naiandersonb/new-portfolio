@@ -1,5 +1,12 @@
 export const experiences = [
   {
+    id: 3,
+    type: 'work',
+    period: 'Jun 2020 - present',
+    formation: 'Front-end Developer at TheMembers',
+    current: true,
+  },
+  {
     id: 1,
     type: 'course',
     period: 'Ago 2020 - Set 2021',
@@ -12,12 +19,6 @@ export const experiences = [
     period: 'Jan 2020 - Jun 2020',
     formation:
       'Front-end Developer and UI Designer at Transfer: Travel & Tourism',
-  },
-  {
-    id: 3,
-    type: 'work',
-    period: 'Jun 2020 - present',
-    formation: 'Front-end Developer at TheMembers',
   },
   {
     id: 4,

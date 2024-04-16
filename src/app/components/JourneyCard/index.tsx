@@ -13,6 +13,7 @@ interface Experience {
   type: string
   period: string
   formation: string
+  current?: boolean
   tag?: Tag
 }
 
@@ -27,8 +28,13 @@ export function JourneyCard({ experience }: JourneyCardProps) {
     return null
   }, [experience])
 
+  const border = experience?.current ? 'border-[#1C7980]' : 'border-neutral-800'
+
   return (
-    <section key={experience.id} className="flex gap-6">
+    <section
+      key={experience.id}
+      className={`flex justify-between flex-col gap-6 border p-4 rounded-md ${border}`}
+    >
       <div className="w-10 flex items-center justify-center h-10 rounded-full text-[#1C7980]">
         {icon}
       </div>
