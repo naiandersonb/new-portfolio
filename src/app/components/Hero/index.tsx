@@ -18,12 +18,11 @@ export function Hero() {
         />
 
         <h1 className="md:text-3xl text-2xl font-medium mb-4 md:max-w-[50%]">
-          Hey there! I&apos;m a frontend developer building intuitive web
-          applications and user-centric solutions.
+          {t('hero.text')}
         </h1>
 
         <p className="md:text-base mt-10 text-sm flex items-center gap-2">
-          Currently front-end at
+          {t('hero.currentJob')}
           <a
             className="text-[#1C7980] font-medium flex items-center gap-3"
             href="https://themembersbrasil.com/"

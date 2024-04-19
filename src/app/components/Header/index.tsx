@@ -21,7 +21,7 @@ export function Header() {
   return (
     <header
       data-id="header"
-      className="left-0 top-0 backdrop-blur-sm right-0 fixed z-10"
+      className="left-0 top-0 bg-neutral-950/85 backdrop-blur-xl right-0 fixed z-10"
     >
       <div className="mx-auto h-[80px] md:px-8 px-4 max-w-[1200px] w-full flex items-center justify-between gap-3">
         <Link href="/">
@@ -30,10 +30,10 @@ export function Header() {
 
         <nav className="md:flex hidden items-center gap-8">
           <LinkItem isSelected={isHome} href="/">
-            Home
+            {t('navigation.home')}
           </LinkItem>
           <LinkItem isSelected={isAboutPage} href="/about">
-            About Me
+            {t('navigation.about')}
           </LinkItem>
 
           <LocaleSwitcher />

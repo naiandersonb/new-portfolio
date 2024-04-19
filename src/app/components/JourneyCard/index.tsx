@@ -1,6 +1,7 @@
 'use client'
 
 import { Briefcase, Certificate } from '@phosphor-icons/react'
+import { useTranslations } from 'next-intl'
 import { useMemo } from 'react'
 
 interface Tag {
@@ -22,6 +23,8 @@ interface JourneyCardProps {
 }
 
 export function JourneyCard({ experience }: JourneyCardProps) {
+  const t = useTranslations('About')
+
   const icon = useMemo(() => {
     if (experience.type === 'course') return <Certificate size={32} />
     if (experience.type === 'work') return <Briefcase size={32} />
@@ -52,7 +55,7 @@ export function JourneyCard({ experience }: JourneyCardProps) {
         </header>
 
         <div>
-          <b>{experience.formation}</b>
+          <b>{t(experience.formation)}</b>
         </div>
       </article>
     </section>
