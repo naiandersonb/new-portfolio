@@ -18,9 +18,7 @@ export function LinkItem({
   const locale = useLocale()
 
   return (
-    <div
-      className={`${isSelected ? 'dark:text-stone-100 text-stone-950' : 'text-stone-500'}`}
-    >
+    <div className={`${isSelected ? 'text-stone-100' : 'text-stone-500'}`}>
       <Link href={`/${locale}/${href}`}>{children}</Link>
     </div>
   )

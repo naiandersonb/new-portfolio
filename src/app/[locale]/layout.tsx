@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import { NextIntlClientProvider, useMessages } from 'next-intl'
-import { Inter, Open_Sans } from 'next/font/google'
+import { DM_Sans, Inter } from 'next/font/google'
 import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
 
@@ -20,8 +20,8 @@ const inter = Inter({
   subsets: ['latin'],
 })
 
-const openSans = Open_Sans({
-  variable: '--open-sans',
+const dmSans = DM_Sans({
+  variable: '--dm-sans',
   subsets: ['latin'],
 })
 
@@ -38,10 +38,10 @@ export default function LocaleLayout({
 
   return (
     <html lang={locale} className="scroll-smooth">
-      <body className={`${inter.variable} ${openSans.variable}`}>
+      <body className={`${inter.variable} ${dmSans.variable}`}>
         <NextIntlClientProvider messages={messages} locale={locale}>
           <Header />
-          <main className="min-h-full mt-[80px] md:p-8 p-4 font-openSans max-w-[1200px] w-full mx-auto">
+          <main className="min-h-full mt-[80px] md:p-8 p-4 font-dmSans max-w-[1200px] w-full mx-auto">
             {children}
             <Footer />
           </main>
