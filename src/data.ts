@@ -70,6 +70,16 @@ export const skills = [
     link: 'https://nextjs.org/',
     image: 'nextjs.svg',
   },
+  {
+    name: 'React Query',
+    link: 'https://tanstack.com/query/latest',
+    image: 'react-query.svg',
+  },
+  {
+    name: 'Tailwind',
+    link: 'https://tailwindcss.com/',
+    image: 'tailwind.svg',
+  },
 ]
 
 export const career = [

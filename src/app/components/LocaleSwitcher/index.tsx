@@ -1,48 +1,37 @@
-import { locales } from '@/app/config'
-import { useLocale, useTranslations } from 'next-intl'
-import Image from 'next/image'
+import { useLocale } from 'next-intl'
 import Link from 'next/link'
-import { useState } from 'react'
-import { Locale, useLocaleSwitcher } from './useLocaleSwitcher'
+import { usePathname } from 'next/navigation'
+import { useMemo } from 'react'
+import { Locale } from './useLocaleSwitcher'
 
 export function LocaleSwitcher() {
   const locale = useLocale() as Locale
-  const { localeLabel, flag, path } = useLocaleSwitcher({ locale })
-  const [isOpen, setIsOpen] = useState(false)
+  const pathname = usePathname()
 
-  const t = useTranslations('LocaleSwitcher')
+  const path = useMemo(() => {
+    const pathSplit = pathname.split('/')
+    if (pathSplit.length > 2) return pathSplit[2]
 
-  const toggleIsOpen = () => setIsOpen((prev) => !prev)
+    return ''
+  }, [pathname])
 
   return (
-    <div className="group relative flex flex-col items-end">
-      <button
-        onClick={toggleIsOpen}
-        className="capitalize flex items-center gap-2 text-xs py-2 px-4 rounded-full overflow-hidden dark:bg-stone-900 bg-stone-100"
+    <div className="grid grid-cols-2 divide-x divide-neutral-700">
+      <Link
+        className={`px-4 ${locale === 'pt' ? 'text-neutral-300' : 'text-neutral-500'}`}
+        href={`/pt/${path}`}
+        locale="pt"
       >
-        <Image src={flag} width={20} height={20} alt="" />
-        {localeLabel}
-      </button>
-      {isOpen && (
-        <div className="dark:bg-stone-900 bg-stone-100 rounded-lg px-2 w-[max-content] group-hover:flex flex-col flex absolute top-[120%]">
-          {locales.map((locale) => (
-            <Link
-              className="flex gap-2 py-2 cursor-pointer"
-              href={`/${locale.key}/${path}`}
-              locale={locale.key}
-              key={locale.key}
-            >
-              <Image
-                src={locale.flag}
-                width={20}
-                height={20}
-                alt={locale.label}
-              />
-              <span className="text-sm">{t(locale.label)}</span>
-            </Link>
-          ))}
-        </div>
-      )}
+        BR
+      </Link>
+
+      <Link
+        className={`px-4 ${locale === 'en' ? 'text-neutral-300' : 'text-neutral-500'}`}
+        href={`/en/${path}`}
+        locale="en"
+      >
+        EN
+      </Link>
     </div>
   )
 }

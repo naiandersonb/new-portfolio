@@ -1,55 +1,45 @@
 'use client'
 
-import { changeAppTheme, getPreferSchemeColor } from '@/utils'
-import { Lightning, List } from '@phosphor-icons/react'
+import { List, X } from '@phosphor-icons/react'
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
-import { useEffect } from 'react'
+import { usePathname } from 'next/navigation'
+import { useState } from 'react'
 import { LocaleSwitcher } from '../LocaleSwitcher'
 import { LinkItem } from './LinkItem'
 
 export function Header() {
   const t = useTranslations('Header')
+  const [isOpen, setIsOpen] = useState(false)
+  const pathname = usePathname()
 
-  useEffect(() => {
-    const appTheme = localStorage.getItem('@nb:app-theme')
-    if (!appTheme) getPreferSchemeColor()
-    if (appTheme === 'dark') {
-      const htmlElement = document.documentElement
-      htmlElement.classList.add('dark')
-    }
-  }, [])
+  const toggleIsOpen = () => setIsOpen(!isOpen)
+
+  const isAboutPage = pathname.includes('/about')
+  const isHome = !isAboutPage
 
   return (
-    <header className="fixed z-10 left-0 right-0 top-0 backdrop-blur-md dark:bg-stone-950/90 bg-stone-200/90">
-      <div className="container py-4 flex items-center justify-between">
+    <header
+      data-id="header"
+      className="left-0 top-0 bg-neutral-950/85 backdrop-blur-xl right-0 fixed z-10"
+    >
+      <div className="mx-auto h-[80px] md:px-8 px-4 max-w-[1200px] w-full flex items-center justify-between gap-3">
         <Link href="/">
-          <h1 className="text-2xl font-extrabold italic dark:bg-stone-100 bg-stone-950  dark:text-stone-950 text-stone-100 p-2">
-            NB
-          </h1>
+          <h1 className="font-medium text-base uppercase">Naianderson Bruno</h1>
         </Link>
 
-        <nav className="md:flex items-center gap-8 hidden">
-          <LinkItem href="/" isSelected>
+        <nav className="md:flex hidden items-center gap-8">
+          <LinkItem isSelected={isHome} href="/">
             {t('navigation.home')}
           </LinkItem>
-          <LinkItem href="about">{t('navigation.about')}</LinkItem>
-          <LinkItem href="contact">{t('navigation.contact')}</LinkItem>
+          <LinkItem isSelected={isAboutPage} href="/about">
+            {t('navigation.about')}
+          </LinkItem>
 
-          <div className="flex items-center gap-2">
-            <LocaleSwitcher />
-
-            <button
-              onClick={changeAppTheme}
-              className="p-2 rounded-full text-stone-950 dark:text-stone-200 bg-stone-50 dark:bg-stone-900"
-            >
-              <Lightning size={18} weight="fill" />
-            </button>
-          </div>
+          <LocaleSwitcher />
         </nav>
-
-        <button className="text-zinc-950 dark:text-zinc-50 block  md:hidden">
-          <List size={32} />
+        <button onClick={toggleIsOpen} className="md:hidden block">
+          {isOpen ? <X size={32} /> : <List size={32} />}
         </button>
       </div>
     </header>

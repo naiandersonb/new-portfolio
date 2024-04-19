@@ -1,3 +1,4 @@
+// @remove
 import { usePathname } from 'next/navigation'
 import { useMemo } from 'react'
 
@@ -8,16 +9,6 @@ interface Props {
 }
 
 export function useLocaleSwitcher({ locale }: Props) {
-  const localeLabel = {
-    en: 'EN',
-    pt: 'BR',
-  }
-
-  const flag = {
-    en: '/images/flags/usa.svg',
-    pt: '/images/flags/brazil.svg',
-  }
-
   const pathname = usePathname()
 
   const path = useMemo(() => {
@@ -26,5 +17,5 @@ export function useLocaleSwitcher({ locale }: Props) {
     return ''
   }, [pathname])
 
-  return { path, localeLabel: localeLabel[locale], flag: flag[locale] }
+  return { path }
 }

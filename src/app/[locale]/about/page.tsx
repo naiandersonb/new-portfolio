@@ -1,41 +1,63 @@
-import { career } from '@/data'
+'use client'
+
+import { JourneyCard } from '@/app/components/JourneyCard'
+import { Reveal } from '@/app/components/Revel'
+import { Skill } from '@/app/components/Skill'
+import { skills } from '@/data'
 import { useTranslations } from 'next-intl'
-import Image from 'next/image'
-import { CareerCard } from '../../components/about/CareerCard'
+import { experiences } from './experiences'
 
 export default function About() {
   const t = useTranslations('About')
 
   return (
-    <div className="container min-h-[90vh] mt-[15vh]">
-      <div
-        data-id="about me"
-        className="flex flex-col items-center justify-center gap-6"
-      >
-        <div className="aspect-square overflow-hidden rounded-xl">
-          <Image
-            unoptimized
-            src="https://i.pinimg.com/736x/44/e3/c5/44e3c52f1efe7432dc71bad6e0a2f96c.jpg"
-            width={200}
-            height={200}
-            alt="photo by naianderson Bruno"
+    <Reveal width="100%">
+      <main>
+        <h1 className="md:text-3xl text-2xl font-medium mb-4">
+          {t('pageTitle')}
+        </h1>
+
+        <div className="flex md:flex-row flex-col md:gap-24 gap-10">
+          <section
+            data-id="avatar"
+            className="max-w-[365px] w-full h-[365px] bg-green-400 rounded-md"
           />
+
+          <section className="flex-1">
+            {/*  <p className="text-xl">{t('aboutMe')}</p> */}
+            <p
+              className="text-xl"
+              dangerouslySetInnerHTML={{
+                __html: t('aboutMe'),
+              }}
+            />
+
+            <div className="mt-16">
+              <h3 className="my-6 text-xl text-neutral-600">Skills</h3>
+
+              <section className="grid md:grid-cols-3 grid-cols-2 gap-2">
+                {skills.map((skill) => (
+                  <Skill
+                    key={skill.name}
+                    image={skill.image}
+                    link={skill.link}
+                    name={skill.name}
+                  />
+                ))}
+              </section>
+            </div>
+          </section>
         </div>
+        <div className="mt-16">
+          <h3 className="my-10 text-xl">{t('journey.title')}</h3>
 
-        <h2 className="md:max-w-[55%] text-center text-stone-500 text-xl">
-          {t('heading')}
-        </h2>
-      </div>
-
-      <div className="my-20 mx-auto">
-        <h3 className="font-bold text-xl">{t('journey.title')}</h3>
-
-        <div className="mt-6 flex flex-col gap-6 ">
-          {career.map((careerItem) => (
-            <CareerCard key={careerItem.id} career={careerItem} />
-          ))}
+          <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-3">
+            {experiences.map((experience) => (
+              <JourneyCard key={experience.id} experience={experience} />
+            ))}
+          </div>
         </div>
-      </div>
-    </div>
+      </main>
+    </Reveal>
   )
 }

@@ -1,39 +1,33 @@
 {
-   
-    "Home": {
-        "hero": {
-            "role": "Front-end Developer",
-            "currentJob": "Currently front-end at"
-        }
-    },
-    "LocaleSwitcher": {
-      "english": "English",
-      "portuguese": "Portuguese"
-    },
-    "About": {
-      "heading": "Hello, my name is Naianderson Bruno, currently living in Caxias, MA. I've been a front-end developer for over 2 years.",
-      "journey": {
-        "title": "My Journey",
-        "career": {
-          "assignmentsTitle": "Assignments",
-          "technicalGraduation": "Technical Course in Systems Development, SENAI - National Service for Industrial Learning",
-          "transfer": "Front-end Developer and UI Design at Transfer: Travel & Tourism",
-          "theMembers": {
-            "title": "Front-end Developer at TheMembers",
-            "assignments": {
-              "one": "Development and maintenance of a highly interactive and customizable white-label teaching platform.",
-              "two": "Development of a dashboard, allowing clients efficient management of their content and data.",
-              "three": "Development of a community that promotes interaction among users, providing a collaborative and engaging environment."
-            }
-          }
-        }
-      }
-    },      
-    "Header": {
-        "navigation": {
-            "home": "Home",
-            "about": "About me",
-            "contact": "Contacts"
-        }
+  "Header": {
+    "navigation": {
+      "home": "Home",
+      "about": "About me",
+      "contact": "Contacts"
     }
+  },
+  "Home": {
+    "hero": {
+      "text": "Hey there! I'm a frontend developer focused on building intuitive web applications and user-centered solutions",
+      "currentJob": "Currently front-end at"
+    }
+  },
+  "Project": {
+    "repository": "Repository"
+  },
+  "About": {
+    "pageTitle": "About me",
+    "aboutMe": "Hello! I’m Naianderson Bruno, a front-end developer based in Caxias, MA, with over two years of experience.<br/><br/>I’m passionate about turning ideas into captivating interfaces, navigating the nuances of HTML, CSS, and JavaScript.<br/><br/>In each project, I strive for not only functionality but also to create memorable experiences. I’m always ready to tackle challenges and turn obstacles into opportunities, bringing energy and creativity to every line of code.",
+    "journey": {
+      "title": "Training and experiences",
+      "technicalGraduation": "Technical Course in Systems Development, SENAI - National Service for Industrial Learning",
+      "transfer": "Front-end Developer and UI Design at Transfer: Travel & Tourism",
+      "theMembers": "Front-end Developer at TheMembers"
+    },
+    "courses": {
+      "unitTestsUDEMY": "Frontend Testing with ReactJS - TDD, Vitest, Cypress, and More",
+      "fullstackJSAlura": "Full Stack JavaScript Training: Build a Project with React and Node.js"
+    }
+  }     
+    
 }
