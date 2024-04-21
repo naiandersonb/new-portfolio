@@ -11,7 +11,7 @@ interface Project {
 interface Props {
   project: Project
 }
-export function ProjectCard({ project }: Props) {
+export function Card({ project }: Props) {
   const t = useTranslations('Project')
 
   return (

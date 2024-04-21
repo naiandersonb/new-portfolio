@@ -1,7 +1,7 @@
 'use client'
 
 import { Hero } from '../components/Hero'
-import { ProjectCard } from '../components/ProjectCard'
+import { Card } from '../components/projects/Card'
 import { Reveal } from '../components/Revel'
 
 const project = {
@@ -23,7 +23,7 @@ export default function Home() {
         <div id="projects">
           <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
             {[1, 2, 3, 4, 5].map((item) => (
-              <ProjectCard key={item} project={project} />
+              <Card key={item} project={project} />
             ))}
           </div>
         </div>
