@@ -1,6 +1,5 @@
 import { ArrowUpRight } from '@phosphor-icons/react'
 import { useTranslations } from 'next-intl'
-import Image from 'next/image'
 
 interface Project {
   title: string
@@ -44,7 +43,7 @@ export function ProjectCard({ project }: Props) {
           )}
         </footer>
       </div>
-      <div>
+      {/* <div>
         <Image
           unoptimized
           src={project.image}
@@ -52,7 +51,7 @@ export function ProjectCard({ project }: Props) {
           width={558}
           height={558}
         />
-      </div>
+      </div> */}
     </article>
   )
 }

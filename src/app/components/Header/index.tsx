@@ -1,12 +1,13 @@
 'use client'
 
-import { List, X } from '@phosphor-icons/react'
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
+import { Footer } from '../Footer'
 import { LocaleSwitcher } from '../LocaleSwitcher'
 import { LinkItem } from './LinkItem'
+import { MenuMobile } from './MenuMobile'
 
 export function Header() {
   const t = useTranslations('Header')
@@ -21,10 +22,10 @@ export function Header() {
   return (
     <header
       data-id="header"
-      className="left-0 top-0 bg-neutral-950/85 backdrop-blur-xl right-0 fixed z-10"
+      className="left-0 top-0 bg-neutral-950/90 backdrop-blur-xl border-b border-b-neutral-900 right-0 fixed z-10"
     >
       <div className="mx-auto h-[80px] md:px-8 px-4 max-w-[1200px] w-full flex items-center justify-between gap-3">
-        <Link href="/">
+        <Link href="/" className="relative z-10">
           <h1 className="font-medium text-base uppercase">Naianderson Bruno</h1>
         </Link>
 
@@ -38,9 +39,25 @@ export function Header() {
 
           <LocaleSwitcher />
         </nav>
-        <button onClick={toggleIsOpen} className="md:hidden block">
-          {isOpen ? <X size={32} /> : <List size={32} />}
-        </button>
+
+        <MenuMobile>
+          <nav className="flex h-[85vh] flex-col justify-between p-4 mt-[80px] border-t border-t-neutral-900">
+            <section className="flex flex-col">
+              <LinkItem className="text-5xl py-6" isSelected={isHome} href="/">
+                {t('navigation.home')}
+              </LinkItem>
+              <LinkItem
+                className="text-5xl py-6"
+                isSelected={isAboutPage}
+                href="/about"
+              >
+                {t('navigation.about')}
+              </LinkItem>
+            </section>
+
+            <Footer align="items-start" />
+          </nav>
+        </MenuMobile>
       </div>
     </header>
   )
