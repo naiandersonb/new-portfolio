@@ -1,5 +1,5 @@
-import { Stack } from '@/interfaces/home'
+import { StackType } from '@/interfaces/home'
 
 export interface StackProps {
-  stack: Stack
+  stack: StackType
 }

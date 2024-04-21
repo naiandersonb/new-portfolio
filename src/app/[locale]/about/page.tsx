@@ -24,7 +24,6 @@ export default function About() {
           />
 
           <section className="flex-1">
-            {/*  <p className="text-xl">{t('aboutMe')}</p> */}
             <p
               className="text-xl"
               dangerouslySetInnerHTML={{
