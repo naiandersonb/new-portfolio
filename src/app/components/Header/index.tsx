@@ -3,7 +3,6 @@
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useState } from 'react'
 import { Footer } from '../Footer'
 import { LocaleSwitcher } from '../LocaleSwitcher'
 import { LinkItem } from './LinkItem'
@@ -11,10 +10,7 @@ import { MenuMobile } from './MenuMobile'
 
 export function Header() {
   const t = useTranslations('Header')
-  const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname()
-
-  const toggleIsOpen = () => setIsOpen(!isOpen)
 
   const isAboutPage = pathname.includes('/about')
   const isHome = !isAboutPage
