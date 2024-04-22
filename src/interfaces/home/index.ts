@@ -11,6 +11,7 @@ export interface Project {
   title: string
   description?: string
   repository: string
+  isPrivate?: boolean
   demo?: string
   image: string
   stacks?: any[]

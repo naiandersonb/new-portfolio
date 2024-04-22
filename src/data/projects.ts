@@ -6,6 +6,7 @@ export const projects: Project[] = [
     title: 'Transfer: Viagens & Turismo',
     image: '/images/project-covers/transfer.png',
     repository: 'https://github.com/naiandersonb/transfer',
+    isPrivate: true,
     demo: 'https://transfer-vt.vercel.app/',
     description:
       'A Transfer: Viagens & Turismo é a primeira empresa legalizada do Sul do Brasil a trabalhar com transporte particular em veículos de até oito pessoas.<br/> <br/> O principal objetivo é eliminar a espera desnecessária por um veículo. Na na Transfer: V&T, não é você que espera por um veículo, é o veículo que espera por você.',

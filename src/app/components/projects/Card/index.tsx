@@ -3,6 +3,7 @@ import { Folders, Globe } from '@phosphor-icons/react'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { ModalDetails } from '../ModalDetails'
+import { CardLink } from './CardLink'
 
 interface Props {
   project: Project
@@ -10,6 +11,10 @@ interface Props {
 
 export function Card({ project }: Props) {
   const t = useTranslations('Project')
+
+  const isPrivateStyle = project?.isPrivate
+    ? 'text-neutral-500 cursor-not-allowed'
+    : 'opacity-85 hover:opacity-100 hover:underline'
 
   return (
     <article className="border p-2 rounded-xl border-neutral-800">
@@ -41,23 +46,18 @@ export function Card({ project }: Props) {
         </ModalDetails>
 
         <div className="flex items-center gap-4">
-          <a
-            className="flex uppercase text-xs font-bold rounded-full items-center gap-2 opacity-85 hover:opacity-100 hover:underline"
+          <CardLink
             href={project.repository}
-            target="_blank"
+            isDisabled={project?.isPrivate}
+            icon={<Folders size={16} />}
           >
-            <Folders size={16} />
             {t('repository')}
-          </a>
+          </CardLink>
+
           {!!project?.demo && (
-            <a
-              className="flex uppercase text-xs font-bold rounded-full items-center gap-2 opacity-85 hover:opacity-100 hover:underline"
-              href={project.demo}
-              target="_blank"
-            >
-              <Globe size={16} />
+            <CardLink href={project.demo} icon={<Globe size={16} />}>
               Demo
-            </a>
+            </CardLink>
           )}
         </div>
       </footer>
