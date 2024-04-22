@@ -12,7 +12,7 @@ export function Card({ project }: Props) {
   const t = useTranslations('Project')
 
   return (
-    <article>
+    <article className="border p-2 rounded-xl border-neutral-800">
       <section className="relative w-full cursor-pointer group aspect-video rounded-xl overflow-hidden">
         <Image
           unoptimized
@@ -33,7 +33,7 @@ export function Card({ project }: Props) {
           )}
         </div>
       </section>
-      <footer className="flex items-center mt-4 mb-8 justify-between gap-4">
+      <footer className="flex items-center mt-4 justify-between gap-4">
         <ModalDetails project={project}>
           <button className="flex border uppercase text-xs font-bold p-2 rounded-full items-center gap-2 opacity-85 hover:opacity-100">
             {t('viewMore')}

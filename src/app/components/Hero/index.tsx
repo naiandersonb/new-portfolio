@@ -20,7 +20,7 @@ export function Hero() {
         <p className="md:text-base mt-10 text-sm flex items-center gap-2">
           {t('hero.currentJob')}
           <a
-            className="text-[#1C7980] font-medium flex items-center gap-3"
+            className="text-primary font-medium flex items-center gap-3"
             href="https://themembersbrasil.com/"
             target="_blank"
             rel="noopener noreferrer"
