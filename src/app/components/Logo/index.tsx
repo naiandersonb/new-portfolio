@@ -7,7 +7,7 @@ export function Logo() {
       <div className="bg-primary flex items-center justify-center p-2 rounded-full">
         <Lightning className="text-neutral-100" size={16} />
       </div>
-      <h1 className="font-bold md:w-full w-[11ch] md:text-base text-xs">
+      <h1 className="font-bold md:w-full w-[11ch] text-base">
         Naianderson <span className="font-light">Bruno</span>
       </h1>
     </Link>
