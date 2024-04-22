@@ -1,10 +1,10 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
-import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Footer } from '../Footer'
 import { LocaleSwitcher } from '../LocaleSwitcher'
+import { Logo } from '../Logo'
 import { LinkItem } from './LinkItem'
 import { MenuMobile } from './MenuMobile'
 
@@ -21,9 +21,7 @@ export function Header() {
       className="left-0 top-0 bg-neutral-950/90 backdrop-blur-xl border-b border-b-neutral-900 right-0 fixed z-10"
     >
       <div className="mx-auto h-[80px] md:px-8 px-4 max-w-[1200px] w-full flex items-center justify-between gap-3">
-        <Link href="/" className="relative z-10">
-          <h1 className="font-medium text-base uppercase">Naianderson Bruno</h1>
-        </Link>
+        <Logo />
 
         <nav className="md:flex hidden items-center gap-8">
           <LinkItem isSelected={isHome} href="/">

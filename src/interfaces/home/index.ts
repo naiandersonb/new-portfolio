@@ -7,6 +7,7 @@ export type StackType =
   | 'node js'
 
 export interface Project {
+  id: string | number
   title: string
   description?: string
   repository: string

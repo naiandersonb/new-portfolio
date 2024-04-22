@@ -13,20 +13,23 @@ export function Card({ project }: Props) {
 
   return (
     <article>
-      <section className="relative w-full cursor-pointer group aspect-video border border-neutral-700 rounded-xl overflow-hidden">
+      <section className="relative w-full cursor-pointer group aspect-video rounded-xl overflow-hidden">
         <Image
           unoptimized
           src={project.image}
           alt={project.title}
-          width={558}
-          height={558}
+          objectFit="cover"
+          fill
         />
         <div className="absolute p-6 inset-0 opacity-0 group-hover:opacity-100 hover:backdrop-blur-lg flex flex-col justify-between transition-opacity ease-in-out duration-300 bg-neutral-800/60">
           <h2 className="font-bold mb-4 md:text-lg">{project.title}</h2>
           {!!project?.description && (
-            <p className="md:text-[1rem] text-[0.875rem]">
-              {project.description}
-            </p>
+            <p
+              className="md:text-[1rem] text-[0.875rem] line-clamp-3"
+              dangerouslySetInnerHTML={{
+                __html: project.description,
+              }}
+            />
           )}
         </div>
       </section>
@@ -41,6 +44,7 @@ export function Card({ project }: Props) {
           <a
             className="flex uppercase text-xs font-bold rounded-full items-center gap-2 opacity-85 hover:opacity-100 hover:underline"
             href={project.repository}
+            target="_blank"
           >
             <Folders size={16} />
             {t('repository')}
@@ -49,6 +53,7 @@ export function Card({ project }: Props) {
             <a
               className="flex uppercase text-xs font-bold rounded-full items-center gap-2 opacity-85 hover:opacity-100 hover:underline"
               href={project.demo}
+              target="_blank"
             >
               <Globe size={16} />
               Demo
