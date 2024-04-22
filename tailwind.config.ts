@@ -13,7 +13,7 @@ const config: Config = {
     },
     extend: {
       colors: {
-        primary: '#1C7980',
+        primary: '#3982F0',
       },
     },
   },
