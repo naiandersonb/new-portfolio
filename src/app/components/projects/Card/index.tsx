@@ -13,7 +13,7 @@ export function Card({ project }: Props) {
 
   return (
     <article className="border p-2 rounded-xl border-neutral-800">
-      <section className="relative w-full cursor-pointer group aspect-video rounded-xl overflow-hidden">
+      <section className="relative w-full cursor-pointer group aspect-video rounded-md overflow-hidden">
         <Image
           unoptimized
           src={project.image}
