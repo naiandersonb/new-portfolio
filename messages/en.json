@@ -13,7 +13,8 @@
     }
   },
   "Project": {
-    "repository": "Repository"
+    "repository": "Repository",
+    "viewMore": "View more"
   },
   "About": {
     "pageTitle": "About me",

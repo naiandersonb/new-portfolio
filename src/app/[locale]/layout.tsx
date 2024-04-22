@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import { NextIntlClientProvider, useMessages } from 'next-intl'
+import { unstable_setRequestLocale } from 'next-intl/server'
 import { DM_Sans, Inter } from 'next/font/google'
 import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
@@ -34,6 +35,7 @@ export default function LocaleLayout({
   children,
   params: { locale },
 }: LayoutProps) {
+  unstable_setRequestLocale(locale)
   const messages = useMessages()
 
   return (

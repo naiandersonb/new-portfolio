@@ -11,6 +11,11 @@ const config: Config = {
       inter: 'var(--inter)',
       dmSans: 'var(--dm-sans)',
     },
+    extend: {
+      colors: {
+        primary: '#1C7980',
+      },
+    },
   },
   plugins: [],
   darkMode: 'class',

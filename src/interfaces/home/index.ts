@@ -1,4 +1,4 @@
-export type Stack =
+export type StackType =
   | 'react'
   | 'typescript'
   | 'next js'
@@ -7,10 +7,11 @@ export type Stack =
   | 'node js'
 
 export interface Project {
+  id: string | number
   title: string
-  description: string
-  repoUrl: string
-  demoUrl: string
-  banner: string
-  stacks?: Stack[]
+  description?: string
+  repository: string
+  demo?: string
+  image: string
+  stacks?: any[]
 }
