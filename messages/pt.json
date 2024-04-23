@@ -9,7 +9,8 @@
   },
   "Project": {
     "repository": "Repositório",
-    "viewMore": "Ver mais"
+    "viewMore": "Ver mais",
+    "privateRepository": "Repositório privado"
   },
   "Home": {
     "hero": {

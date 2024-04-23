@@ -1,4 +1,5 @@
 import { LockSimple } from '@phosphor-icons/react'
+import { useTranslations } from 'next-intl'
 import { ReactNode } from 'react'
 
 interface CardLinkProps {
@@ -14,12 +15,14 @@ export function CardLink({
   icon = <></>,
   isDisabled = false,
 }: CardLinkProps) {
+  const t = useTranslations('Project')
+
   return isDisabled ? (
     <div className="flex uppercase text-xs font-bold rounded-full items-center gap-2 text-neutral-500 cursor-not-allowed group relative">
       <LockSimple size={16} />
       {children}
       <div className="absolute opacity-0 group-hover:opacity-100 top-[-180%] w-[max-content] bg-neutral-800 p-1 rounded-md text-[12px] font-normal capitalize text-neutral-300">
-        Repositório privado
+        {t('privateRepository')}
       </div>
     </div>
   ) : (
