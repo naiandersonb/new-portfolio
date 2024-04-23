@@ -12,7 +12,7 @@ export function Logo() {
       </div>
       <h1 className="font-bold text-base md:block md:w-[11ch] md:text-base uppercase">
         <span className="md:hidden text-3xl">NB</span>
-        <span className="md:inline hidden">
+        <span className="md:block w-[max-content] hidden">
           Naianderson <span className="font-light">Bruno</span>
         </span>
       </h1>

@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { ReactNode } from 'react'
+import { CardLink } from '../Card/CardLink'
 
 interface ModalDetailsProps {
   children: ReactNode
@@ -73,21 +74,17 @@ export function ModalDetails({ children, project }: ModalDetailsProps) {
               )}
 
               <div className="flex items-center md:mt-0 mt-auto border-t border-t-neutral-700 pt-4 gap-4">
-                <a
-                  className="flex uppercase text-base font-bold rounded-full items-center gap-2 opacity-85 hover:opacity-100 hover:underline"
+                <CardLink
                   href={project.repository}
+                  isDisabled={project?.isPrivate}
+                  icon={<Folders size={16} />}
                 >
-                  <Folders size={16} />
                   {t('repository')}
-                </a>
+                </CardLink>
                 {!!project?.demo && (
-                  <a
-                    className="flex uppercase text-base font-bold rounded-full items-center gap-2 opacity-85 hover:opacity-100 hover:underline"
-                    href={project.demo}
-                  >
-                    <Globe size={16} />
+                  <CardLink href={project.demo} icon={<Globe size={16} />}>
                     Demo
-                  </a>
+                  </CardLink>
                 )}
               </div>
             </motion.div>

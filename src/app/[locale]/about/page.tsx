@@ -5,6 +5,7 @@ import { Reveal } from '@/app/components/Revel'
 import { Skill } from '@/app/components/Skill'
 import { skills } from '@/data'
 import { useTranslations } from 'next-intl'
+import Image from 'next/image'
 import { experiences } from './experiences'
 
 export default function About() {
@@ -17,11 +18,17 @@ export default function About() {
           {t('pageTitle')}
         </h1>
 
-        <div className="flex md:flex-row flex-col md:gap-24 gap-10">
-          <section
-            data-id="avatar"
-            className="max-w-[365px] w-full h-[365px] bg-green-400 rounded-md"
-          />
+        <div className="flex md:flex-row flex-col md:gap-24 gap-8">
+          <section className="aspect-square w-[max-content]">
+            <Image
+              unoptimized
+              className="rounded-lg"
+              src="https://avatars.githubusercontent.com/u/72632956?v=4"
+              alt="profile photo by Naianderson Bruno"
+              width={200}
+              height={200}
+            />
+          </section>
 
           <section className="flex-1">
             <p
