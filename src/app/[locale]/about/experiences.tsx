@@ -2,7 +2,7 @@ export const experiences = [
   {
     id: 3,
     type: 'work',
-    period: 'Jun 2020 - present',
+    period: 'Jun 2022 - present',
     formation: 'journey.theMembers',
     current: true,
   },
