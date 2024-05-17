@@ -5,7 +5,7 @@
 @layer base {
   body {
     -webkit-font-smoothing: antialiased;
-    @apply bg-stone-950 text-stone-200
+    @apply dark:bg-stone-950 bg-stone-300 dark:text-stone-200 text-stone-950
   }
 }
 

@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation'
 import { Footer } from '../Footer'
 import { LocaleSwitcher } from '../LocaleSwitcher'
 import { Logo } from '../Logo'
+import { ThemeToggle } from '../ThemeToggle'
 import { LinkItem } from './LinkItem'
 import { MenuMobile } from './MenuMobile'
 
@@ -32,6 +33,8 @@ export function Header() {
           </LinkItem>
 
           <LocaleSwitcher />
+
+          <ThemeToggle />
         </nav>
 
         <MenuMobile>
