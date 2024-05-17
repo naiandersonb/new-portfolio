@@ -36,7 +36,7 @@ export function MenuMobile({ children }: MenuMobileProps) {
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
             transition={{ type: 'tween' }}
-            className="absolute top-0 bg-neutral-950 left-0 right-0 h-[100vh]"
+            className="absolute top-0 dark:bg-stone-950 bg-stone-300 left-0 right-0 h-[100vh]"
           >
             {children}
           </motion.div>
