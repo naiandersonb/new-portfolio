@@ -24,7 +24,7 @@ export function Header() {
       <div className="mx-auto h-[80px] md:px-8 px-4 max-w-[1200px] w-full flex items-center justify-between gap-3">
         <Logo />
 
-        <nav className="md:flex hidden items-center gap-8">
+        <nav className="md:flex hidden items-center gap-4">
           <LinkItem isSelected={isHome} href="/">
             {t('navigation.home')}
           </LinkItem>
