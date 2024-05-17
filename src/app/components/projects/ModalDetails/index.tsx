@@ -34,14 +34,14 @@ export function ModalDetails({ children, project }: ModalDetailsProps) {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed inset-0 z-30 flex md:items-center items-end justify-center bg-neutral-800/50 backdrop-blur-lg"
+            className="fixed inset-0 z-30 flex md:items-center items-end justify-center bg-stone-800/50 backdrop-blur-lg"
             initial="hidden"
             animate="visible"
             exit="hidden"
             variants={modalVariants}
           >
             <motion.div
-              className="flex flex-col gap-6 max-w-[700px] w-full bg-neutral-950 rounded-md p-4 md:h-[max-content] h-[90vh]"
+              className="flex flex-col gap-6 max-w-[700px] w-full dark:bg-stone-950 bg-stone-200 rounded-md p-4 md:h-[max-content] h-[90vh]"
               initial={{ y: -50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.3, delay: 0.1 }}
@@ -73,7 +73,7 @@ export function ModalDetails({ children, project }: ModalDetailsProps) {
                 />
               )}
 
-              <div className="flex items-center md:mt-0 mt-auto border-t border-t-neutral-700 pt-4 gap-4">
+              <div className="flex items-center md:mt-0 mt-auto border-t dark:border-t-stone-700 border-t-stone-300 pt-4 gap-4">
                 <CardLink
                   href={project.repository}
                   isDisabled={project?.isPrivate}

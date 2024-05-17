@@ -13,7 +13,7 @@ export function Card({ project }: Props) {
   const t = useTranslations('Project')
 
   return (
-    <article className="p-4 group relative border border-neutral-800 rounded-md">
+    <article className="p-4 group relative border dark:border-neutral-800 border-neutral-400 dark:bg-stone-950 bg-stone-200 rounded-md">
       <h2 className="font-bold my-2 md:text-lg">{project.title}</h2>
       <section className="relative w-full cursor-pointer aspect-video rounded-md overflow-hidden flex-1 group-hover:opacity-80">
         <Image src={project.image} alt={project.title} objectFit="cover" fill />

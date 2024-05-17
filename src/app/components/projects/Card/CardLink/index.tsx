@@ -18,10 +18,10 @@ export function CardLink({
   const t = useTranslations('Project')
 
   return isDisabled ? (
-    <div className="flex uppercase text-xs font-bold rounded-full items-center gap-2 text-neutral-500 cursor-not-allowed group relative">
+    <div className="flex uppercase text-xs font-bold rounded-full items-center gap-2 text-stone-500 cursor-not-allowed group relative">
       <LockSimple size={16} />
       {children}
-      <div className="absolute opacity-0 group-hover:opacity-100 top-[-180%] w-[max-content] bg-neutral-800 p-1 rounded-md text-[12px] font-normal capitalize text-neutral-300">
+      <div className="absolute opacity-0 group-hover:opacity-100 top-[-180%] w-[max-content] dark:bg-stone-800 bg-stone-100 p-1 rounded-md text-[12px] font-normal capitalize dark:text-stone-300 text-stone-950">
         {t('privateRepository')}
       </div>
     </div>
