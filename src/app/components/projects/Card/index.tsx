@@ -13,13 +13,13 @@ export function Card({ project }: Props) {
   const t = useTranslations('Project')
 
   return (
-    <article className="p-4 group relative border dark:border-neutral-800 border-neutral-400 dark:bg-stone-950 bg-stone-200 rounded-md">
+    <article className="p-4 group relative border dark:border-stone-800 border-stone-400 dark:bg-stone-950 bg-stone-200 rounded-md">
       <h2 className="font-bold my-2 md:text-lg">{project.title}</h2>
       <section className="relative w-full cursor-pointer aspect-video rounded-md overflow-hidden flex-1 group-hover:opacity-80">
         <Image src={project.image} alt={project.title} objectFit="cover" fill />
 
         {project?.isPrivate && (
-          <div className="absolute p-2 top-3 right-3 bg-neutral-50 rounded-full text-neutral-500 shadow-sm">
+          <div className="absolute p-2 top-3 right-3 bg-stone-50 rounded-full text-stone-500 shadow-sm">
             <LockSimple size={20} />
           </div>
         )}
