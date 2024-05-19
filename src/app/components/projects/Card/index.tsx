@@ -13,7 +13,7 @@ export function Card({ project }: Props) {
   const t = useTranslations('Project')
 
   return (
-    <article className="p-4 group relative border dark:border-stone-800 border-stone-400 dark:bg-stone-950 bg-stone-200 rounded-md">
+    <article className="p-4 group relative border dark:border-stone-800 border-stone-200 dark:bg-stone-950 bg-stone-100 rounded-md">
       <h2 className="font-bold my-2 md:text-lg">{project.title}</h2>
       <section className="relative w-full cursor-pointer aspect-video rounded-md overflow-hidden flex-1 group-hover:opacity-80">
         <Image src={project.image} alt={project.title} objectFit="cover" fill />
@@ -43,7 +43,7 @@ export function Card({ project }: Props) {
         </div>
 
         <ModalDetails project={project}>
-          <button className="flex border uppercase text-xs font-bold p-2 rounded-full items-center gap-2 opacity-85 hover:opacity-100">
+          <button className="flex border dark:border-stone-800 border-stone-300 uppercase text-xs font-bold p-2 rounded-md items-center gap-2 opacity-85 hover:opacity-100">
             {t('viewMore')}
           </button>
         </ModalDetails>

@@ -33,12 +33,12 @@ export function JourneyCard({ experience }: JourneyCardProps) {
 
   const border = experience?.current
     ? 'border-primary'
-    : 'dark:border-stone-800 border-stone-400'
+    : 'dark:border-stone-800 border-stone-200'
 
   return (
     <section
       key={experience.id}
-      className={`flex justify-between flex-col gap-6 border p-4 rounded-md ${border} dark:bg-stone-950 bg-stone-200`}
+      className={`flex justify-between flex-col gap-6 border p-4 rounded-md ${border} dark:bg-stone-950 bg-stone-100`}
     >
       <div className="w-10 flex items-center justify-center h-10 rounded-full text-primary">
         {icon}

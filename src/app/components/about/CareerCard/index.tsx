@@ -27,7 +27,7 @@ export function CareerCard({ career }: CareerCardProps) {
             <p className="font-medium">
               {t('journey.career.assignmentsTitle')}
             </p>
-            <ul className="border-l border-l-stone-300 dark:border-l-stone-800 pl-3 mt-5 flex flex-col gap-4">
+            <ul className="border-l border-l-stone-50 dark:border-l-stone-800 pl-3 mt-5 flex flex-col gap-4">
               {career.assignments?.map((assignment, index) => (
                 <li className="text-sm text-stone-500" key={index}>
                   {t(assignment)}

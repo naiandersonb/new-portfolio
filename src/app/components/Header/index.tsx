@@ -19,7 +19,7 @@ export function Header() {
   return (
     <header
       data-id="header"
-      className="left-0 top-0 dark:bg-stone-950/90 bg-stone-300/90 backdrop-blur-xl border-b dark:border-b-stone-900 border-b-stone-400 right-0 fixed z-10"
+      className="left-0 top-0 dark:bg-stone-950/90 bg-stone-50/90 backdrop-blur-xl border-b dark:border-b-stone-900 border-b-stone-200 right-0 fixed z-10"
     >
       <div className="mx-auto h-[80px] md:px-8 px-4 max-w-[1200px] w-full flex items-center justify-between gap-3">
         <Logo />

@@ -46,14 +46,14 @@ export function ThemeToggle() {
   return (
     <div className="flex items-center gap-2 relative">
       <button
-        className="p-2 border dark:border-stone-800 border-stone-400 dark:bg-stone-950 bg-stone-200 rounded-md"
+        className="p-2 border dark:border-stone-800 border-stone-200 dark:bg-stone-950 bg-stone-100 rounded-md"
         onClick={onToggle}
       >
         {currentTheme.icon}
       </button>
 
       {isOpen && (
-        <div className="flex flex-col absolute right-0 top-[110%] dark:bg-stone-950 bg-stone-200 border dark:border-stone-800 border-stone-400 rounded-md overflow-hidden">
+        <div className="flex flex-col absolute right-0 top-[110%] dark:bg-stone-950 bg-stone-100 border dark:border-stone-800 border-stone-200 rounded-md overflow-hidden">
           {themesMode.map((mode) => (
             <div
               className="flex items-center gap-2 cursor-pointer dark:hover:bg-stone-900 hover:bg-stone-300 px-2 py-1"
