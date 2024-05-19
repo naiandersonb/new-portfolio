@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { NextIntlClientProvider, useMessages } from 'next-intl'
 import { unstable_setRequestLocale } from 'next-intl/server'
+import { ThemeProvider } from 'next-themes'
 import { DM_Sans, Inter } from 'next/font/google'
 import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
@@ -42,15 +43,23 @@ export default function LocaleLayout({
   const messages = useMessages()
 
   return (
-    <html lang={locale} className="scroll-smooth">
-      <body className={`${inter.variable} ${dmSans.variable}`}>
-        <NextIntlClientProvider messages={messages} locale={locale}>
-          <Header />
-          <main className="min-h-full mt-[80px] md:p-8 p-4 font-dmSans max-w-[1200px] w-full mx-auto">
-            {children}
-            <Footer />
-          </main>
-        </NextIntlClientProvider>
+    <html lang={locale} suppressHydrationWarning>
+      <body className={`${inter.variable} ${dmSans.variable} scroll-smooth`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <NextIntlClientProvider messages={messages} locale={locale}>
+            <Header />
+            <main className="min-h-full mt-[80px] md:p-8 p-4 font-dmSans max-w-[1200px] w-full mx-auto">
+              {children}
+
+              <Footer />
+            </main>
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   )

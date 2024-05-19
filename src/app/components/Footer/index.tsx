@@ -10,10 +10,10 @@ export function Footer({ align = 'items-center' }: FooterProps) {
     <footer
       className={`mt-10 py-4 flex flex-col-reverse md:flex-row justify-between gap-4 ${align}`}
     >
-      <div className="flex items-center gap-6 text-stone-500">
+      <div className="flex items-center gap-3 text-stone-500">
         {SocialMediaList.map((socialMedia) => (
           <a
-            className="md:opacity-60 hover:opacity-100"
+            className="dark:md:opacity-60 hover:opacity-100 border dark:border-transparent border-stone-600 bg-stone-950 rounded-md dark:bg-transparent"
             key={socialMedia.id}
             href={socialMedia.link}
             target="_blank"
@@ -28,7 +28,7 @@ export function Footer({ align = 'items-center' }: FooterProps) {
         ))}
       </div>
 
-      <p className="md:text-neutral-500 hover:text-neutral-100 text-neutral-100 cursor-pointer">
+      <p className="md:text-stone-500 dark:hover:text-stone-100 hover:text-stone-950 dark:text-stone-100 text-stone-700 cursor-pointer">
         naiandersonb.dev@gmail.com
       </p>
     </footer>
