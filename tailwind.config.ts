@@ -8,8 +8,8 @@ const config: Config = {
   ],
   theme: {
     fontFamily: {
-      inter: 'var(--inter)',
-      dmSans: 'var(--dm-sans)',
+      roboto: 'var(--roboto)',
+      ibmPlexMono: 'var(--ibm-plex-mono)',
     },
     extend: {
       colors: {

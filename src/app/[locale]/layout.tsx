@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { NextIntlClientProvider, useMessages } from 'next-intl'
 import { unstable_setRequestLocale } from 'next-intl/server'
 import { ThemeProvider } from 'next-themes'
-import { DM_Sans, Inter } from 'next/font/google'
+import { IBM_Plex_Mono, Roboto } from 'next/font/google'
 import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
 
@@ -17,14 +17,16 @@ interface LayoutProps {
   params: { locale: string }
 }
 
-const inter = Inter({
-  variable: '--inter',
+const roboto = Roboto({
+  variable: '--roboto',
   subsets: ['latin'],
+  weight: ['100', '300', '500', '700', '900'],
 })
 
-const dmSans = DM_Sans({
-  variable: '--dm-sans',
+const ibmPlexMono = IBM_Plex_Mono({
+  variable: '--ibm-plex-mono',
   subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600'],
 })
 
 export const metadata: Metadata = {
@@ -44,7 +46,9 @@ export default function LocaleLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={`${inter.variable} ${dmSans.variable} scroll-smooth`}>
+      <body
+        className={`${roboto.variable} ${ibmPlexMono.variable} scroll-smooth`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

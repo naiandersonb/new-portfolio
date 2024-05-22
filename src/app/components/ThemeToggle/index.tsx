@@ -46,7 +46,7 @@ export function ThemeToggle() {
   return (
     <div className="flex items-center gap-2 relative">
       <button
-        className="p-2 border dark:border-stone-800 border-stone-200 dark:bg-stone-950 bg-stone-100 rounded-md"
+        className="p-2 bg-amber-300 text-stone-950 rounded-md"
         onClick={onToggle}
       >
         {currentTheme.icon}
