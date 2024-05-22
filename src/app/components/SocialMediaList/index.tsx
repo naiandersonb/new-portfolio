@@ -1,17 +1,19 @@
-export const SocialMediaList = [
+import { GithubLogo, LinkedinLogo, WhatsappLogo } from '@phosphor-icons/react'
+
+export const socialMediaList = [
   {
     id: 'linkedin',
-    icon: '/images/socialMedia/linkedin-white.svg',
+    icon: <LinkedinLogo size={24} />,
     link: 'https://www.linkedin.com/in/naianderson-bruno/',
   },
   {
     id: 'github',
-    icon: '/images/socialMedia/github-white.svg',
+    icon: <GithubLogo size={24} />,
     link: 'https://github.com/naiandersonb',
   },
   {
     id: 'whatsapp',
-    icon: '/images/socialMedia/whatsapp-white.svg',
+    icon: <WhatsappLogo size={24} />,
     link: '#',
   },
 ]

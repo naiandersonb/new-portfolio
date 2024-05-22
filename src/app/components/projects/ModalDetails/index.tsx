@@ -34,7 +34,7 @@ export function ModalDetails({ children, project }: ModalDetailsProps) {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed inset-0 z-30 flex md:items-center items-end justify-center bg-stone-800/50 backdrop-blur-lg"
+            className="fixed inset-0 z-40 flex md:items-center items-end justify-center bg-stone-800/50 backdrop-blur-lg"
             initial="hidden"
             animate="visible"
             exit="hidden"

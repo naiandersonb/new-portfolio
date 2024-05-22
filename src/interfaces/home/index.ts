@@ -14,5 +14,5 @@ export interface Project {
   isPrivate?: boolean
   demo?: string
   image: string
-  stacks?: any[]
+  stacks?: string[]
 }

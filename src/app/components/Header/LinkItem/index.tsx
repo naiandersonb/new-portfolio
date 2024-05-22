@@ -21,7 +21,7 @@ export function LinkItem({
 
   return (
     <div
-      className={`${isSelected ? 'md:font-bold underline' : 'dark:text-stone-100 text-stone-950'} ${className}`}
+      className={`${isSelected ? 'md:font-bold md:dark:bg-stone-900 md:bg-stone-200 rounded-lg md:no-underline underline p-2' : 'dark:text-stone-100 text-stone-950'} ${className}`}
     >
       <Link href={`/${locale}/${href}`}>{children}</Link>
     </div>

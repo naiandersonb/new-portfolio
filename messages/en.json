@@ -10,7 +10,8 @@
     "hero": {
       "text": "Hey there! I'm a frontend developer focused on building intuitive web applications and user-centered solutions",
       "currentJob": "Currently front-end at"
-    }
+    },
+    "projects": "Projects"
   },
   "Project": {
     "repository": "Repository",

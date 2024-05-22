@@ -18,7 +18,7 @@ export function LocaleSwitcher() {
   return (
     <div className="grid grid-cols-2 divide-x dark:divide-stone-700 divide-stone-400">
       <Link
-        className={`px-3 ${locale === 'pt' ? 'dark:text-stone-50 text-stone-950' : 'text-neutral-500'}`}
+        className={`px-3 ${locale === 'pt' ? 'dark:text-stone-50 text-stone-950' : 'text-stone-500'}`}
         href={`/pt/${path}`}
         locale="pt"
       >
@@ -26,7 +26,7 @@ export function LocaleSwitcher() {
       </Link>
 
       <Link
-        className={`px-3 ${locale === 'en' ? 'dark:text-stone-50 text-stone-950' : 'text-neutral-500'}`}
+        className={`px-3 ${locale === 'en' ? 'dark:text-stone-50 text-stone-950' : 'text-stone-500'}`}
         href={`/en/${path}`}
         locale="en"
       >

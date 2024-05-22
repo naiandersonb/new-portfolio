@@ -18,7 +18,7 @@ export function CardLink({
   const t = useTranslations('Project')
 
   return isDisabled ? (
-    <div className="flex uppercase text-xs font-bold rounded-full items-center gap-2 text-stone-500 cursor-not-allowed group relative">
+    <div className="flex text-xs font-bold rounded-full items-center gap-2 text-stone-500 cursor-not-allowed group relative">
       <LockSimple size={16} />
       {children}
       <div className="absolute opacity-0 group-hover:opacity-100 top-[-180%] w-[max-content] dark:bg-stone-800 bg-stone-50 p-1 rounded-md text-[12px] font-normal capitalize dark:text-stone-50 text-stone-950">
@@ -27,7 +27,7 @@ export function CardLink({
     </div>
   ) : (
     <a
-      className="flex uppercase text-xs font-bold rounded-full items-center gap-2 opacity-85 hover:opacity-100 hover:underline"
+      className="flex text-xs font-bold rounded-full items-center gap-2 opacity-85 hover:opacity-100 hover:bg-amber-400 dark:hover:text-stone-950 p-2"
       href={href}
       target="_blank"
     >

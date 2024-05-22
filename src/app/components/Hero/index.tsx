@@ -17,10 +17,10 @@ export function Hero() {
           {t('hero.text')}
         </h1>
 
-        <p className="md:text-base mt-10 text-sm flex items-center gap-2">
+        <p className="md:text-base mt-10 text-stone-400 text-sm flex items-center gap-2 font-normal">
           {t('hero.currentJob')}
           <a
-            className="text-primary font-medium flex items-center gap-3"
+            className="dark:text-stone-50 text-stone-950 flex items-center gap-3 hover:underline font-bold"
             href="https://themembersbrasil.com/"
             target="_blank"
             rel="noopener noreferrer"

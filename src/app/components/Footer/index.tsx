@@ -1,5 +1,6 @@
-import Image from 'next/image'
-import { SocialMediaList } from '../SocialMediaList'
+'use client'
+
+import { socialMediaList } from '../SocialMediaList'
 
 interface FooterProps {
   align?: 'items-center' | 'items-start' | 'items-end'
@@ -10,20 +11,15 @@ export function Footer({ align = 'items-center' }: FooterProps) {
     <footer
       className={`mt-10 py-4 flex flex-col-reverse md:flex-row justify-between gap-4 ${align}`}
     >
-      <div className="flex items-center gap-3 text-stone-500">
-        {SocialMediaList.map((socialMedia) => (
+      <div className="flex items-center gap-2">
+        {socialMediaList.map((socialMedia) => (
           <a
-            className="dark:md:opacity-60 hover:opacity-100 border dark:border-transparent border-stone-600 bg-stone-950 rounded-md dark:bg-transparent"
+            className="hover:bg-amber-400 p-2 rounded-full hover:dark:text-stone-950 dark:text-stone-50 text-stone-950"
             key={socialMedia.id}
             href={socialMedia.link}
             target="_blank"
           >
-            <Image
-              src={socialMedia.icon}
-              alt={socialMedia.id}
-              width={28}
-              height={28}
-            />
+            {socialMedia.icon}
           </a>
         ))}
       </div>
