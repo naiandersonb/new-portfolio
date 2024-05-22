@@ -22,7 +22,7 @@ export default function About() {
           <section className="aspect-square w-[max-content]">
             <Image
               unoptimized
-              className="rounded-lg"
+              className="rounded-sm"
               src="https://avatars.githubusercontent.com/u/72632956?v=4"
               alt="profile photo by Naianderson Bruno"
               width={200}
@@ -32,30 +32,33 @@ export default function About() {
 
           <section className="flex-1">
             <p
-              className="text-xl"
+              className="text-xl font-normal"
               dangerouslySetInnerHTML={{
                 __html: t('aboutMe'),
               }}
             />
 
             <div className="mt-16">
-              <h3 className="my-6 text-xl text-neutral-600">Skills</h3>
+              <div className="border-b dark:border-stone-800 border-stone-200 my-6 py-2">
+                <h3 className=" font-ibmPlexMono text-stone-500 uppercase font-medium text-sm">
+                  Skills
+                </h3>
+              </div>
 
-              <section className="grid md:grid-cols-3 grid-cols-2 gap-2">
+              <section className="flex flex-wrap gap-4">
                 {skills.map((skill) => (
-                  <Skill
-                    key={skill.name}
-                    image={skill.image}
-                    link={skill.link}
-                    name={skill.name}
-                  />
+                  <Skill link={skill.link} name={skill.name} key={skill.name} />
                 ))}
               </section>
             </div>
           </section>
         </div>
         <div className="mt-16">
-          <h3 className="my-10 text-xl">{t('journey.title')}</h3>
+          <div className="border-b dark:border-stone-800 border-stone-200 my-6 py-2">
+            <h3 className=" font-ibmPlexMono text-stone-500 uppercase font-medium text-sm">
+              {t('journey.title')}
+            </h3>
+          </div>
 
           <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-3">
             {experiences.map((experience) => (

@@ -31,21 +31,19 @@ export function JourneyCard({ experience }: JourneyCardProps) {
     return null
   }, [experience])
 
-  const border = experience?.current
-    ? 'border-primary'
-    : 'dark:border-stone-800 border-stone-200'
+  const background = 'dark:bg-stone-900 bg-stone-200'
 
   return (
     <section
       key={experience.id}
-      className={`flex justify-between flex-col gap-6 border p-4 rounded-md ${border} dark:bg-stone-950 bg-stone-100`}
+      className={`flex justify-between flex-col gap-6 border dark:border-stone-800 border-stone-200 p-4 rounded-sm ${experience?.current && background}`}
     >
-      <div className="w-10 flex items-center justify-center h-10 rounded-full text-primary">
+      <div className="w-10 flex items-center justify-center h-10 rounded-full dark:text-stone-50 text-stone-950">
         {icon}
       </div>
 
       <article className="rounded-md overflow-hidden p-2">
-        <header className=" text-xs text-stone-500 mb-2 flex items-center gap-2">
+        <header className="font-ibmPlexMono font-medium uppercase text-xs text-stone-500 mb-2 flex items-center gap-2">
           <p>{experience.period}</p>
           {experience?.tag && (
             <div
