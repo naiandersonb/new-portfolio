@@ -20,9 +20,9 @@ export default function Home() {
               {t('projects')}
             </h3>
           </div>
-          <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
-            {projects.map((project) => (
-              <Card key={project.id} project={project} />
+          <div className="grid grid-cols-1 gap-4">
+            {projects.map((project, index) => (
+              <Card key={project.id} project={project} index={index} />
             ))}
           </div>
         </div>
